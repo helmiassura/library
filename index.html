@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 My Library</h1>
+            <button class="add-book-btn" id="addBookBtn">+ Add New Book</button>
+        </header>
+
+        <div class="library-grid" id="libraryGrid"></div>
+        <div class="empty-message" id="emptyMessage" style="display: none;">
+            No books in your library yet. Add your first book!
+        </div>
+    </div>
+
+    <dialog id="bookDialog">
+        <div class="dialog-content">
+            <h2>Add New Book</h2>
+            <form id="bookForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="pages">Number of Pages</label>
+                    <input type="number" id="pages" name="pages" min="1" required>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="read" name="read">
+                        <label for="read">I've already read this book</label>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Add Book</button>
+                    <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
